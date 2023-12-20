@@ -1,17 +1,17 @@
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuItem, NavbarMenuToggle, NavbarMenu, Link, Button } from '@nextui-org/react'
-import Logo from './Logo'
+import { Logo } from './Icons'
 import { useState } from 'react'
 
 const menuItems = ['Inicio', 'Acerca de nosotros', 'Contáctanos', 'Angenda tú cita', 'Paga tú factura']
 
-export default function NavbarComponent() {
+export const NavbarComponent = () => {
   const [openMenu, setOpenMenu] = useState(false)
 
   return (
     <Navbar
       onMenuOpenChange={setOpenMenu}
       height={'12lvh'}
-      className='border-b  border-b-gray-300'>
+      className='border-b border-b-gray-300'>
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={openMenu ? 'Menu cerrado' : 'Menu abierto'}
@@ -19,14 +19,14 @@ export default function NavbarComponent() {
         />
         <NavbarBrand>
           <Logo
-            width={150}
-            height={150}
+            width={100}
+            height={100}
           />
         </NavbarBrand>
       </NavbarContent>
 
       <NavbarContent
-        className='hidden sm:flex gap-8'
+        className='hidden gap-8 sm:flex'
         justify='center'>
         <NavbarItem isActive>
           <Link href='#'>Inicio</Link>
