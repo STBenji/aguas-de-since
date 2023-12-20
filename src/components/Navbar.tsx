@@ -14,7 +14,7 @@ export default function NavbarComponent() {
       className='border-b  border-b-gray-300'>
       <NavbarContent>
         <NavbarMenuToggle
-          aria-label={openMenu ? 'Close menu' : 'Open menu'}
+          aria-label={openMenu ? 'Menu cerrado' : 'Menu abierto'}
           className='sm:hidden'
         />
         <NavbarBrand>
