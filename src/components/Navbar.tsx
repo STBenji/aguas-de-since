@@ -11,7 +11,7 @@ export default function NavbarComponent() {
     <Navbar
       onMenuOpenChange={setOpenMenu}
       height={'12lvh'}
-      className='border-b  border-b-gray-300'>
+      className='border-b border-b-gray-300'>
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={openMenu ? 'Menu cerrado' : 'Menu abierto'}
@@ -26,7 +26,7 @@ export default function NavbarComponent() {
       </NavbarContent>
 
       <NavbarContent
-        className='hidden sm:flex gap-8'
+        className='hidden gap-8 sm:flex'
         justify='center'>
         <NavbarItem isActive>
           <Link href='#'>Inicio</Link>
