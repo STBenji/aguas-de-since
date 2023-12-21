@@ -1,11 +1,16 @@
-import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuItem, NavbarMenuToggle, NavbarMenu, Link, Button } from '@nextui-org/react'
+import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuItem, NavbarMenuToggle, NavbarMenu, Button } from '@nextui-org/react'
 import { Logo } from './Icons'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
+import { Signal, signal } from '@preact/signals-react'
 
-const menuItems = ['Inicio', 'Acerca de nosotros', 'Contáctanos', 'Angenda tú cita', 'Paga tú factura']
+type TActualLink = '/' | '/about' | '/contact' | '/bill'
 
 export const NavbarComponent = () => {
   const [openMenu, setOpenMenu] = useState(false)
+  const actualLink: Signal<TActualLink> = signal('/')
+
+  const menuItems = ['Inicio', 'Acerca de nosotros', 'Contáctanos', 'Angenda tu cita', 'Paga tu factura']
 
   return (
     <Navbar
@@ -24,43 +29,29 @@ export const NavbarComponent = () => {
           />
         </NavbarBrand>
       </NavbarContent>
-
       <NavbarContent
         className='hidden gap-8 sm:flex'
         justify='center'>
-        <NavbarItem isActive>
-          <Link href='#'>Inicio</Link>
-        </NavbarItem>
         <NavbarItem>
           <Link
-            href='#'
-            color='foreground'>
-            Acerca de nosotros
+            to='/'
+            className={actualLink.value === '/' ? 'font-semibold' : ''}>
+            Inicio
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link
-            color='foreground'
-            href='#'>
-            Contáctanos
-          </Link>
+          <Link to='/about'>Acerca de nosotros</Link>
         </NavbarItem>
         <NavbarItem>
-          <Link
-            color='foreground'
-            href='#'>
-            Paga tú factura
-          </Link>
+          <Link to='/contact'>Contáctanos</Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link to='/bill'>Paga tu factura</Link>
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify='end'>
         <NavbarItem>
-          <Button
-            as={Link}
-            color='primary'
-            href='#'>
-            Agenda tú cita
-          </Button>
+          <Button color='primary'>Agenda tu cita</Button>
         </NavbarItem>
       </NavbarContent>
       <NavbarMenu>
@@ -69,8 +60,7 @@ export const NavbarComponent = () => {
             <Link
               color={index === 2 ? 'primary' : index === menuItems.length - 1 ? 'danger' : 'foreground'}
               className='w-full'
-              href='#'
-              size='lg'>
+              to='/'>
               {item}
             </Link>
           </NavbarMenuItem>

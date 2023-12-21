@@ -8,3 +8,9 @@ body {
   background-color: whitesmoke;
   font-family: 'Poppins', sans-serif;
 }
+
+@layer base {
+  .font-outline {
+    -webkit-text-stroke: 1px #4ab8c7;
+  }
+}
