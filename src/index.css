@@ -1,7 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-  background: whitesmoke;
+  background-color: whitesmoke;
+  font-family: 'Poppins', sans-serif;
+}
+
+@layer base {
+  .font-outline {
+    -webkit-text-stroke: 1px #4ab8c7;
+  }
 }
