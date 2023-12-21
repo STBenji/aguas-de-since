@@ -1,17 +1,24 @@
+import { Footer } from '../../components/Footer'
 import { NavbarComponent } from '../../components/Navbar'
 import DescriptionAboutUs from './Description.AboutUs'
 import HeroAboutUs from './Hero.AboutUS'
 import PurposeAboutUs from './Purpose.AboutUs'
 import ServicesAboutUs from './Services.AboutUs'
+import ShapesDecoratorsAboutUs from './ShapesDecorators.AboutUs'
 
-export default function AboutUs({}) {
+export default function AboutUs() {
   return (
-    <main>
+    <>
       <NavbarComponent />
-      <HeroAboutUs />
-      <DescriptionAboutUs />
-      <ServicesAboutUs />
-      <PurposeAboutUs />
-    </main>
+      <main>
+        <HeroAboutUs />
+        <ShapesDecoratorsAboutUs />
+        <DescriptionAboutUs />
+
+        <ServicesAboutUs />
+        <PurposeAboutUs />
+      </main>
+      <Footer />
+    </>
   )
 }

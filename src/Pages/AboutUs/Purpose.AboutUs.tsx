@@ -28,7 +28,7 @@ const PurposeAboutUs: React.FC = () => {
   }
 
   return (
-    <section className='grid py-2 place-content-center px-80'>
+    <section className='grid px-3 py-2 place-content-center'>
       <ul className='relative flex flex-wrap justify-center text-sm font-medium text-center text-gray dark:text-gray-400'>
         {purpose.map((item) => (
           <>
@@ -51,7 +51,7 @@ const PurposeAboutUs: React.FC = () => {
             activeTab === item.id && (
               <Card
                 key={item.id}
-                className='max-w-[40rem] px-3 py-2 h-[30vh]'>
+                className='max-w-[40rem] py-3 px-5  h-[30vh]'>
                 <CardBody>
                   <CardHeader className='flex justify-center'>
                     <h1 className='text-xl font-semibold'>{item.title}</h1>

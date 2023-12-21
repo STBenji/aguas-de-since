@@ -2,8 +2,8 @@ import { Image } from '@nextui-org/react'
 
 export default function HeroAboutUs() {
   return (
-    <section className='grid grid-cols-2 gap-8 mt-5 px-28 '>
-      <aside className='flex flex-wrap justify-end gap-10'>
+    <section className='grid gap-8 px-20 mt-5 md:grid-cols-2 '>
+      <aside className='flex-wrap justify-end hidden gap-10 md:flex'>
         {/* <Image /> */}
         {/* <Image /> */}
         <section className='flex items-end '>
@@ -16,7 +16,7 @@ export default function HeroAboutUs() {
           src='/casaAguasDeSincé.jpg'
         />
       </aside>
-      <section className='flex flex-wrap items-end'>
+      <section className='flex flex-wrap items-end justify-center md:justify-start gap-y-3'>
         <article className='flex flex-wrap gap-2 pl-12'>
           <span className='text-[#1090CB] font-semibold text-2xl'>Acerca de nosotros</span>
           <h1 className='text-4xl font-bold text-[#252525]'>Aguas de Sincé S.A ESP</h1>
