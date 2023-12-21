@@ -5,8 +5,8 @@ export default function DescriptionAboutUs() {
 
   return (
     <Fragment>
-      <h1 className='text-[#1090CB] text-4xl font-bold text-center py-32'>¿Quiénes somos?</h1>
-      <p className='text-xl px-96 text-[#262626]'>{description}</p>
+      <h1 className='text-[#1090CB] text-4xl font-bold text-center py-40'>¿Quiénes somos?</h1>
+      <p className='text-xl px-80 text-[#585858]'>{description}</p>
     </Fragment>
   )
 }

@@ -1,7 +1,7 @@
-import { ShapesDecorators } from './ShapesDecorators.home'
-import { ServicesIcons } from './ServicesIcons.home'
-import { HomeHero } from './Hero.home'
-import { CompanyDetails } from './CompanyDetails.home'
+import { CompanyDetails } from "./CompanyDetails.home";
+import { HomeHero } from "./Hero.home";
+import { ServicesIcons } from "./ServicesIcons.home";
+import { ShapesDecorators } from "./ShapesDecorators.home";
 
 export default function HomePage() {
   return (

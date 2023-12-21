@@ -4,7 +4,7 @@ import { createBrowserRouter } from 'react-router-dom'
  * Components
  */
 import App from './App'
-import AboutUs from './Pages/AboutUs/AboutUs'
+import AboutUs from './pages/AboutUs/AboutUs'
 
 export const router = createBrowserRouter([
   {
