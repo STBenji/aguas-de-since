@@ -3,17 +3,19 @@ import { Image } from '@nextui-org/react'
 export const Footer = () => {
   return (
     <footer className='grid grid-rows-[1fr_auto] mt-20'>
-      <section className='grid grid-cols-3 px-24 pb-10 border-b border-b-gray-400'>
+      <section className='grid grid-rows-3 px-24 pb-10 border-b md:grid-rows-1 md:grid-cols-3 border-b-gray-400'>
         <div
           aria-describedby='Información de empresa'
-          className='grid justify-start auto-rows-min'>
-          <Image
-            width={110}
-            height={110}
-            src='/LogoPrincipal_2.png'
-            alt='Logo de la empresa'
-          />
-          <p className='text-sm font-extralight'>Empresa oficial de servicios públicos de acueducto y alcantarillado del municipio de Sincé Sucre</p>
+          className='grid justify-center auto-rows-min'>
+          <span className='mx-auto md:mx-0'>
+            <Image
+              width={110}
+              height={110}
+              src='/LogoPrincipal_2.png'
+              alt='Logo de la empresa'
+            />
+          </span>
+          <p className='text-sm text-center font-extralight md:text-left'>Empresa oficial de servicios públicos de acueducto y alcantarillado del municipio de Sincé Sucre</p>
         </div>
         <div
           aria-describedby='Contacto'
