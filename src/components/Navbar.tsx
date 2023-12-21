@@ -1,11 +1,18 @@
-import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuItem, NavbarMenuToggle, NavbarMenu, Link, Button } from '@nextui-org/react'
+import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuItem, NavbarMenuToggle, NavbarMenu, Button } from '@nextui-org/react'
 import { Logo } from './Icons'
 import { useState } from 'react'
-
-const menuItems = ['Inicio', 'Acerca de nosotros', 'Contáctanos', 'Angenda tú cita', 'Paga tú factura']
+import { Link, useLocation } from 'react-router-dom'
 
 export const NavbarComponent = () => {
   const [openMenu, setOpenMenu] = useState(false)
+  const { pathname } = useLocation()
+
+  const menuItems = [
+    { name: 'Inicio', path: '/' },
+    { name: 'Acerca de nosotros', path: '/about' },
+    { name: 'Contáctanos', path: '/contact' },
+    { name: 'Paga tu factura', path: '/bill' }
+  ]
 
   return (
     <Navbar
@@ -24,54 +31,36 @@ export const NavbarComponent = () => {
           />
         </NavbarBrand>
       </NavbarContent>
-
       <NavbarContent
         className='hidden gap-8 sm:flex'
         justify='center'>
-        <NavbarItem isActive>
-          <Link href='#'>Inicio</Link>
+        <NavbarItem isActive={pathname === '/'}>
+          <Link to='/'>Inicio</Link>
         </NavbarItem>
-        <NavbarItem>
-          <Link
-            href='#'
-            color='foreground'>
-            Acerca de nosotros
-          </Link>
+        <NavbarItem isActive={pathname === '/about'}>
+          <Link to='/about'>Acerca de nosotros</Link>
         </NavbarItem>
-        <NavbarItem>
-          <Link
-            color='foreground'
-            href='#'>
-            Contáctanos
-          </Link>
+        <NavbarItem isActive={pathname === '/contact'}>
+          <Link to='/contact'>Contáctanos</Link>
         </NavbarItem>
-        <NavbarItem>
-          <Link
-            color='foreground'
-            href='#'>
-            Paga tú factura
-          </Link>
+        <NavbarItem isActive={pathname === '/bill'}>
+          <Link to='/bill'>Paga tu factura</Link>
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify='end'>
         <NavbarItem>
-          <Button
-            as={Link}
-            color='primary'
-            href='#'>
-            Agenda tú cita
-          </Button>
+          <Button color='primary'>Agenda tu cita</Button>
         </NavbarItem>
       </NavbarContent>
       <NavbarMenu>
-        {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
+        {menuItems.map(({ name, path }, index) => (
+          <NavbarMenuItem
+            key={`${name}-${index}`}
+            isActive={pathname === path}>
             <Link
-              color={index === 2 ? 'primary' : index === menuItems.length - 1 ? 'danger' : 'foreground'}
               className='w-full'
-              href='#'
-              size='lg'>
-              {item}
+              to={path}>
+              {name}
             </Link>
           </NavbarMenuItem>
         ))}

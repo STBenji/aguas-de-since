@@ -28,7 +28,7 @@ export const CompanyDetails = () => {
       <section className='grid gap-32'>
         <div className='flex flex-col gap-20'>
           <ContentBlock
-            blockHeight='20rem'
+            blockHeight='25rem'
             isListedTitle
             data={contentBlockData}
           />
@@ -36,7 +36,7 @@ export const CompanyDetails = () => {
         <div className='grid grid-rows-2 gap-10 md:grid-cols-2 md:grid-rows-1'>
           <Card
             backgroundColor='#99999930'
-            className='flex flex-col gap-6 text-center p-14'
+            className='flex flex-col gap-6 text-center md:p-14'
             isRounded>
             <h3 className='text-xl font-medium'>Tu fuente confiable de calidad y compromiso</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse iusto tenetur, ea ipsam quia minima cum mollitia est cupiditate commodi non alias reprehenderit veritatis modi ab officia. Dicta, deserunt ratione?</p>
@@ -44,7 +44,7 @@ export const CompanyDetails = () => {
           <Card
             backgroundColor='#004FB6'
             textColor='white'
-            className='flex flex-col gap-6 text-center p-14'
+            className='flex flex-col gap-6 text-center md:p-14'
             isRounded>
             <h3 className='text-xl font-medium'>Más que un suministro, una promesa de tranquilidad</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum repellendus deleniti pariatur ea quasi molestiae quos eaque, assumenda nulla sint minima dolorem est quia hic mollitia tempore praesentium voluptatum tempora.</p>
