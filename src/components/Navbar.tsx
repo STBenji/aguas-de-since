@@ -9,6 +9,7 @@ export const NavbarComponent = () => {
 
   const menuItems = [
     { name: 'Inicio', path: '/' },
+    { name: 'Servicios', path: '/services' },
     { name: 'Acerca de nosotros', path: '/about' },
     { name: 'Contáctanos', path: '/contact' },
     { name: 'Paga tu factura', path: '/bill' }
@@ -38,6 +39,11 @@ export const NavbarComponent = () => {
           className='text-sm'
           isActive={pathname === '/'}>
           <Link to='/'>Inicio</Link>
+        </NavbarItem>
+        <NavbarItem
+          className='text-sm'
+          isActive={pathname === '/services'}>
+          <Link to='/services'>Servicios</Link>
         </NavbarItem>
         <NavbarItem
           className='text-sm'

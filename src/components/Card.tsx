@@ -5,12 +5,13 @@ interface ICardProps extends HTMLAttributes<HTMLElement> {
   backgroundColor?: string
   textColor?: string
   isRounded?: boolean
+  customPadding?: boolean
 }
 
-export const Card = ({ children, backgroundColor, textColor, isRounded, className }: ICardProps) => {
+export const Card = ({ children, backgroundColor, textColor, isRounded, className, customPadding }: ICardProps) => {
   return (
     <div
-      className={`w-full h-full p-10 ${isRounded && 'rounded-xl'} ${className}`}
+      className={`w-full h-full ${!customPadding && 'p-10'}  ${isRounded && 'rounded-xl'} ${className}`}
       style={{ backgroundColor, color: textColor }}>
       {children}
     </div>
