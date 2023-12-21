@@ -1,16 +1,18 @@
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuItem, NavbarMenuToggle, NavbarMenu, Button } from '@nextui-org/react'
 import { Logo } from './Icons'
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { Signal, signal } from '@preact/signals-react'
-
-type TActualLink = '/' | '/about' | '/contact' | '/bill'
+import { Link, useLocation } from 'react-router-dom'
 
 export const NavbarComponent = () => {
   const [openMenu, setOpenMenu] = useState(false)
-  const actualLink: Signal<TActualLink> = signal('/')
+  const { pathname } = useLocation()
 
-  const menuItems = ['Inicio', 'Acerca de nosotros', 'Contáctanos', 'Angenda tu cita', 'Paga tu factura']
+  const menuItems = [
+    { name: 'Inicio', path: '/' },
+    { name: 'Acerca de nosotros', path: '/about' },
+    { name: 'Contáctanos', path: '/contact' },
+    { name: 'Paga tu factura', path: '/bill' }
+  ]
 
   return (
     <Navbar
@@ -32,20 +34,16 @@ export const NavbarComponent = () => {
       <NavbarContent
         className='hidden gap-8 sm:flex'
         justify='center'>
-        <NavbarItem>
-          <Link
-            to='/'
-            className={actualLink.value === '/' ? 'font-semibold' : ''}>
-            Inicio
-          </Link>
+        <NavbarItem isActive={pathname === '/'}>
+          <Link to='/'>Inicio</Link>
         </NavbarItem>
-        <NavbarItem>
+        <NavbarItem isActive={pathname === '/about'}>
           <Link to='/about'>Acerca de nosotros</Link>
         </NavbarItem>
-        <NavbarItem>
+        <NavbarItem isActive={pathname === '/contact'}>
           <Link to='/contact'>Contáctanos</Link>
         </NavbarItem>
-        <NavbarItem>
+        <NavbarItem isActive={pathname === '/bill'}>
           <Link to='/bill'>Paga tu factura</Link>
         </NavbarItem>
       </NavbarContent>
@@ -55,13 +53,14 @@ export const NavbarComponent = () => {
         </NavbarItem>
       </NavbarContent>
       <NavbarMenu>
-        {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
+        {menuItems.map(({ name, path }, index) => (
+          <NavbarMenuItem
+            key={`${name}-${index}`}
+            isActive={pathname === path}>
             <Link
-              color={index === 2 ? 'primary' : index === menuItems.length - 1 ? 'danger' : 'foreground'}
               className='w-full'
-              to='/'>
-              {item}
+              to={path}>
+              {name}
             </Link>
           </NavbarMenuItem>
         ))}

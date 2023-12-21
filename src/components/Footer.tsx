@@ -33,7 +33,7 @@ export const Footer = () => {
           </div>
         </div>
         <div
-          aria-aria-describedby='Lugar de la empresa'
+          aria-describedby='Lugar de la empresa'
           className='grid items-center justify-center grid-rows-[1fr_1fr] gap-2 text-center'>
           <h4 className='self-end font-semibold'>¿Dónde encontrarnos?</h4>
           <p className='text-sm font-extralight'>Calle 6 # 10-28 Barrio La Ceja, Sincé - Sucre</p>
