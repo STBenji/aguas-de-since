@@ -1,4 +1,4 @@
-import { createBrowserRouter } from 'react-router-dom'
+import { ScrollRestoration, createBrowserRouter } from 'react-router-dom'
 
 /*
  * Components
@@ -11,22 +11,47 @@ import { NavbarComponent } from './components/Navbar'
 export const router = createBrowserRouter([
   {
     path: '/',
-    element: <App />
+    element: (
+      <>
+        <App />
+        <ScrollRestoration />
+      </>
+    )
   },
   {
     path: '/services',
-    element: <ServicesPage />
+    element: (
+      <>
+        <ServicesPage />
+        <ScrollRestoration />
+      </>
+    )
   },
   {
     path: '/about',
-    element: <AboutUs />
+    element: (
+      <>
+        <AboutUs />
+        <ScrollRestoration />
+      </>
+    )
   },
   {
     path: '/contact',
-    element: <NavbarComponent />
+    element: (
+      <>
+        <NavbarComponent />
+        <ScrollRestoration />
+      </>
+    )
   },
   {
     path: '/bill',
-    element: <NavbarComponent />
+    element: (
+      <>
+        <NavbarComponent />
+        <ScrollRestoration />
+      </>
+    )
   }
 ])
