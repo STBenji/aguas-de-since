@@ -6,8 +6,8 @@ import { ScrollRestoration, createBrowserRouter } from 'react-router-dom'
 import App from './App'
 import AboutUs from './pages/AboutUs/AboutUs'
 import ServicesPage from './pages/Services/Services.page'
-import { NavbarComponent } from './components/Navbar'
 import ContactPages from './pages/Contact/Contact.pages'
+import BillPage from './pages/Bill/Bill.page'
 
 export const router = createBrowserRouter([
   {
@@ -50,7 +50,7 @@ export const router = createBrowserRouter([
     path: '/bill',
     element: (
       <>
-        <NavbarComponent />
+        <BillPage />
         <ScrollRestoration />
       </>
     )
