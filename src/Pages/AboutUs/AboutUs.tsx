@@ -4,7 +4,7 @@ import HeroAboutUs from './Hero.AboutUS'
 import PurposeAboutUs from './Purpose.AboutUs'
 import ServicesAboutUs from './Services.AboutUs'
 
-export default function AboutUs({}) {
+export default function AboutUs() {
   return (
     <main>
       <NavbarComponent />

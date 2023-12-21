@@ -1,8 +1,7 @@
-import { Fragment } from 'react'
 import { IconOne, IconTwo } from '../../components/Icons'
 
 export const ServicesIcons = () => (
-  <Fragment>
+  <section className='h-[30lvh] flex flex-col md:flex-row justify-center items-center gap-10 border-b border-b-gray-300'>
     <div className='flex items-center gap-3'>
       <IconOne
         width={70}
@@ -19,5 +18,5 @@ export const ServicesIcons = () => (
       />
       <span className='font-semibold'>Alcantarillado</span>
     </div>
-  </Fragment>
+  </section>
 )

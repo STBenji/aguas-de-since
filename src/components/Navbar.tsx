@@ -9,6 +9,7 @@ export const NavbarComponent = () => {
 
   const menuItems = [
     { name: 'Inicio', path: '/' },
+    { name: 'Servicios', path: '/services' },
     { name: 'Acerca de nosotros', path: '/about' },
     { name: 'Contáctanos', path: '/contact' },
     { name: 'Paga tu factura', path: '/bill' }
@@ -34,16 +35,29 @@ export const NavbarComponent = () => {
       <NavbarContent
         className='hidden gap-8 sm:flex'
         justify='center'>
-        <NavbarItem isActive={pathname === '/'}>
+        <NavbarItem
+          className='text-sm'
+          isActive={pathname === '/'}>
           <Link to='/'>Inicio</Link>
         </NavbarItem>
-        <NavbarItem isActive={pathname === '/about'}>
+        <NavbarItem
+          className='text-sm'
+          isActive={pathname === '/services'}>
+          <Link to='/services'>Servicios</Link>
+        </NavbarItem>
+        <NavbarItem
+          className='text-sm'
+          isActive={pathname === '/about'}>
           <Link to='/about'>Acerca de nosotros</Link>
         </NavbarItem>
-        <NavbarItem isActive={pathname === '/contact'}>
+        <NavbarItem
+          className='text-sm'
+          isActive={pathname === '/contact'}>
           <Link to='/contact'>Contáctanos</Link>
         </NavbarItem>
-        <NavbarItem isActive={pathname === '/bill'}>
+        <NavbarItem
+          className='text-sm'
+          isActive={pathname === '/bill'}>
           <Link to='/bill'>Paga tu factura</Link>
         </NavbarItem>
       </NavbarContent>
