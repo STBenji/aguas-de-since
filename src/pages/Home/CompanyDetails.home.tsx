@@ -1,4 +1,3 @@
-import { Fragment } from 'react'
 import { ContentBlock, IDataContent } from '../../components/ContentBlock'
 import { Card } from '../../components/Card'
 
@@ -23,12 +22,11 @@ export const CompanyDetails = () => {
   ]
 
   return (
-    <Fragment>
+    <section className='flex flex-col gap-16 p-16'>
       <h2 className='text-3xl font-semibold text-center '>Prestadora del servicio de acueducto y alcantarillado del municipio de Sincé.</h2>
       <section className='grid gap-32'>
         <div className='flex flex-col gap-20'>
           <ContentBlock
-            blockHeight='25rem'
             isListedTitle
             data={contentBlockData}
           />
@@ -51,6 +49,6 @@ export const CompanyDetails = () => {
           </Card>
         </div>
       </section>
-    </Fragment>
+    </section>
   )
 }
