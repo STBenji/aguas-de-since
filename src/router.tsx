@@ -6,6 +6,7 @@ import { createBrowserRouter } from 'react-router-dom'
 import App from './App'
 import AboutUs from './pages/AboutUs/AboutUs'
 import { NavbarComponent } from './components/Navbar'
+import ContactPages from './pages/Contact/Contact.pages'
 
 export const router = createBrowserRouter([
   {
@@ -18,7 +19,7 @@ export const router = createBrowserRouter([
   },
   {
     path: '/contact',
-    element: <NavbarComponent />
+    element: <ContactPages />
   },
   {
     path: '/bill',

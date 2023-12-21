@@ -34,22 +34,34 @@ export const NavbarComponent = () => {
       <NavbarContent
         className='hidden gap-8 sm:flex'
         justify='center'>
-        <NavbarItem isActive={pathname === '/'}>
+        <NavbarItem
+          className='text-sm'
+          isActive={pathname === '/'}>
           <Link to='/'>Inicio</Link>
         </NavbarItem>
-        <NavbarItem isActive={pathname === '/about'}>
+        <NavbarItem
+          className='text-sm'
+          isActive={pathname === '/about'}>
           <Link to='/about'>Acerca de nosotros</Link>
         </NavbarItem>
-        <NavbarItem isActive={pathname === '/contact'}>
+        <NavbarItem
+          className='text-sm'
+          isActive={pathname === '/contact'}>
           <Link to='/contact'>Contáctanos</Link>
         </NavbarItem>
-        <NavbarItem isActive={pathname === '/bill'}>
+        <NavbarItem
+          className='text-sm'
+          isActive={pathname === '/bill'}>
           <Link to='/bill'>Paga tu factura</Link>
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify='end'>
         <NavbarItem>
-          <Button color='primary'>Agenda tu cita</Button>
+          <Button
+            className='text-sm'
+            color='primary'>
+            Agenda tu cita
+          </Button>
         </NavbarItem>
       </NavbarContent>
       <NavbarMenu>
