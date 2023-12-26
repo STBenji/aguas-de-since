@@ -1,4 +1,3 @@
-import { Fragment } from 'react'
 import { Logo } from '../../components/Icons'
 import { Button } from '@nextui-org/react'
 import { ShapesDecorators } from './ShapesDecorators.home'

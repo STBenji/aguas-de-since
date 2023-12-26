@@ -1,6 +1,14 @@
+import axios from 'axios'
+
 export class Request {
-  private apiRoute = import.meta.env.VITE_API_ROUTE_1
-  private apiKey = import.meta.env.VITE_API_KEY_1
+  private readonly apiRoute = import.meta.env.VITE_API_ROUTE_1
 
   constructor() {}
+
+  async sendMail(data: object) {
+    const url = `${this.apiRoute}/v1/email`
+    const response = await axios.post(url, data)
+
+    return response
+  }
 }
