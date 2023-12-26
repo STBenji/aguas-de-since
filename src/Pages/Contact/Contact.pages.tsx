@@ -8,11 +8,11 @@ export default function ContactPages() {
   return (
     <>
       <NavbarComponent />
-      <main>
+      <main className='px-8'>
         <HeroContact />
         <DateContanct />
+        <PQRSInfo />
       </main>
-      <PQRSInfo />
       <Footer />
     </>
   )
