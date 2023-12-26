@@ -6,7 +6,7 @@ export default function BillPage() {
   return (
     <>
       <NavbarComponent />
-      <main className='px-16 pt-16'>
+      <main className='px-8 pt-16'>
         <UserForm />
       </main>
       <Footer />

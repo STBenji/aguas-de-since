@@ -25,7 +25,7 @@ export const UserForm = () => {
           className='grid items-center grid-rows-2 gap-5'>
           <div className='flex flex-col items-center justify-center h-full gap-10 md:flex-row'>
             <Select
-              label='Selecciona tu tipo de documento'
+              label='Tipo de documento'
               variant='bordered'
               required
               className='max-w-xs'>
