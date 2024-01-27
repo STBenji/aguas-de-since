@@ -2,6 +2,7 @@ import { Logo } from '../../components/Icons'
 import { Button } from '@nextui-org/react'
 import { ShapesDecorators } from './ShapesDecorators.home'
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 
 export const HomeHero = () => {
   const container = {
@@ -41,7 +42,9 @@ export const HomeHero = () => {
           variants={item}>
           ¡Donde el agua fluye, la calidad y el compromiso llegan a tu hogar!
         </motion.p>
-        <Button color='primary'>Contáctanos</Button>
+        <Button color='primary'>
+          <Link to={'/contact'}>Contáctanos </Link>
+        </Button>
       </motion.article>
       <motion.aside
         className='items-center justify-center hidden sm:flex'

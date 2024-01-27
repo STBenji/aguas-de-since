@@ -8,6 +8,7 @@ import AboutUs from './pages/AboutUs/AboutUs'
 import ServicesPage from './pages/Services/Services.page'
 import ContactPages from './pages/Contact/Contact.pages'
 import BillPage from './pages/Bill/Bill.page'
+import Transparency from './pages/Transparency/Transparency'
 
 export const router = createBrowserRouter([
   {
@@ -51,6 +52,15 @@ export const router = createBrowserRouter([
     element: (
       <>
         <BillPage />
+        <ScrollRestoration />
+      </>
+    )
+  },
+  {
+    path: '/transparency',
+    element: (
+      <>
+        <Transparency />
         <ScrollRestoration />
       </>
     )

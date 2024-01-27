@@ -1,4 +1,4 @@
-import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuItem, NavbarMenuToggle, NavbarMenu, Button } from '@nextui-org/react'
+import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuItem, NavbarMenuToggle, NavbarMenu, Button, Dropdown, DropdownTrigger, DropdownMenu, DropdownItem } from '@nextui-org/react'
 import { Logo } from './Icons'
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
@@ -13,6 +13,7 @@ export const NavbarComponent = () => {
     { name: 'Inicio', path: '/' },
     { name: 'Servicios', path: '/services' },
     { name: 'Acerca de nosotros', path: '/about' },
+    { name: 'Transparencia', path: '/transparency' },
     { name: 'Contáctanos', path: '/contact' },
     { name: 'Paga tu factura', path: '/bill' }
   ]
@@ -60,11 +61,29 @@ export const NavbarComponent = () => {
             isActive={pathname === '/services'}>
             <Link to='/services'>Servicios</Link>
           </NavbarItem>
-          <NavbarItem
-            className='text-sm'
-            isActive={pathname === '/about'}>
-            <Link to='/about'>Acerca de nosotros</Link>
-          </NavbarItem>
+          <Dropdown>
+            <NavbarItem
+              className='text-sm'
+              isActive={pathname === '/about'}>
+              <DropdownTrigger>
+                <Button
+                  disableRipple
+                  className='p-0 bg-transparent data-[hover=true]:bg-transparent'
+                  radius='sm'
+                  variant='light'>
+                  Acerca de nosotros
+                </Button>
+              </DropdownTrigger>
+            </NavbarItem>
+            <DropdownMenu>
+              <DropdownItem key='Sobre nosotros'>
+                <Link to='/about'>Sobre nosotros</Link>
+              </DropdownItem>
+              <DropdownItem key='Transparencia'>
+                <Link to='/transparency'>Transparencia</Link>
+              </DropdownItem>
+            </DropdownMenu>
+          </Dropdown>
           <NavbarItem
             className='text-sm'
             isActive={pathname === '/contact'}>
