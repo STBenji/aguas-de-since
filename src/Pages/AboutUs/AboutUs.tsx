@@ -12,9 +12,8 @@ export default function AboutUs() {
       <NavbarComponent />
       <main>
         <HeroAboutUs />
-        <ShapesDecoratorsAboutUs />
         <DescriptionAboutUs />
-
+        <ShapesDecoratorsAboutUs />
         <ServicesAboutUs />
         <PurposeAboutUs />
       </main>

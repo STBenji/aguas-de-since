@@ -8,7 +8,7 @@ export default function ContactPages() {
   return (
     <>
       <NavbarComponent />
-      <main className='px-8'>
+      <main className='px-8 py-5'>
         <HeroContact />
         <DateContanct />
         <PQRSInfo />

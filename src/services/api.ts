@@ -6,7 +6,7 @@ export class Request {
   constructor() {}
 
   async sendMail(data: object) {
-    const url = `${this.apiRoute}/v1/email`
+    const url = `${this.apiRoute}/v1/emails`
     const response = await axios.post(url, data)
 
     return response

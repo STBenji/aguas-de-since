@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import { ContentBlock, IDataContent } from '../../components/ContentBlock'
 
 export const ServicesDetails = () => {
@@ -16,11 +17,15 @@ export const ServicesDetails = () => {
       isReversed: true
     }
   ]
+
   return (
     <section className='min-h-screen p-16 pt-72 md:pt-52'>
-      <div className='flex flex-col gap-20'>
+      <motion.div
+        className='flex flex-col gap-20'
+        initial='offscreen'
+        whileInView='onscreen'>
         <ContentBlock data={contentBlockData} />
-      </div>
+      </motion.div>
     </section>
   )
 }
