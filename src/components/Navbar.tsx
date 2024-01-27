@@ -92,11 +92,11 @@ export const NavbarComponent = () => {
             isActive={pathname === '/contact'}>
             <Link to='/contact'>Contáctanos</Link>
           </NavbarItem>
-          <NavbarItem
+          {/* <NavbarItem
             className='text-sm'
             isActive={pathname === '/bill'}>
             <Link to='/bill'>Paga tu factura</Link>
-          </NavbarItem>
+          </NavbarItem> */}
         </NavbarContent>
         <NavbarContent justify='end'>
           <NavbarItem>
