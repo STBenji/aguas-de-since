@@ -1,5 +1,6 @@
 import { ContentBlock, IDataContent } from '../../components/ContentBlock'
 import { Card } from '../../components/Card'
+import { Variants, motion } from 'framer-motion'
 
 export const CompanyDetails = () => {
   const contentBlockData: IDataContent[] = [
@@ -21,34 +22,83 @@ export const CompanyDetails = () => {
     }
   ]
 
+  const companyVariant: Variants = {
+    offscreen: {
+      opacity: 0,
+      transition: {
+        delayChildren: 0.9,
+        staggerChildren: 0.2
+      }
+    },
+    onscreen: {
+      opacity: 1,
+      transition: {
+        duration: 0.9
+      }
+    }
+  }
+
+  const textVariant: Variants = {
+    screenoff: {
+      opacity: 0,
+      transition: {
+        delayChildren: 0.9,
+        staggerChildren: 0.2
+      }
+    },
+    screenon: {
+      opacity: 1,
+      transition: {
+        duration: 0.9
+      }
+    }
+  }
+
   return (
-    <section className='flex flex-col gap-16 p-16'>
-      <h2 className='text-3xl font-semibold text-center '>Prestadora del servicio de acueducto y alcantarillado del municipio de Sincé.</h2>
+    <motion.section
+      className='flex flex-col gap-16 p-16'
+      initial='offscreen'
+      whileInView='onscreen'>
+      <motion.h2
+        variants={companyVariant}
+        className='text-3xl font-semibold text-center '>
+        Prestadora del servicio de acueducto y alcantarillado del municipio de Sincé.
+      </motion.h2>
       <section className='grid gap-32'>
-        <div className='flex flex-col gap-20'>
+        <motion.div
+          className='flex flex-col gap-20'
+          initial='offscreen'
+          whileInView='onscreen'>
           <ContentBlock
             isListedTitle
             data={contentBlockData}
           />
-        </div>
-        <div className='grid grid-rows-2 gap-10 md:grid-cols-2 md:grid-rows-1'>
-          <Card
-            backgroundColor='#99999930'
-            className='flex flex-col gap-6 text-center md:p-14'
-            isRounded>
-            <h3 className='text-xl font-medium'>Tu fuente confiable de calidad y compromiso</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse iusto tenetur, ea ipsam quia minima cum mollitia est cupiditate commodi non alias reprehenderit veritatis modi ab officia. Dicta, deserunt ratione?</p>
-          </Card>
-          <Card
-            backgroundColor='#004FB6'
-            textColor='white'
-            className='flex flex-col gap-6 text-center md:p-14'
-            isRounded>
-            <h3 className='text-xl font-medium'>Más que un suministro, una promesa de tranquilidad</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum repellendus deleniti pariatur ea quasi molestiae quos eaque, assumenda nulla sint minima dolorem est quia hic mollitia tempore praesentium voluptatum tempora.</p>
-          </Card>
-        </div>
+        </motion.div>
+        <motion.div
+          className='grid grid-rows-2 gap-10 md:grid-cols-2 md:grid-rows-1'
+          initial='screenoff'
+          whileInView='screenon'>
+          <motion.div variants={textVariant}>
+            <Card
+              backgroundColor='#99999930'
+              className='flex flex-col gap-6 text-center md:p-14'
+              isRounded>
+              <h3 className='text-xl font-medium'>Tu fuente confiable de calidad y compromiso</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse iusto tenetur, ea ipsam quia minima cum mollitia est cupiditate commodi non alias reprehenderit veritatis modi ab officia. Dicta, deserunt ratione?</p>
+            </Card>
+          </motion.div>
+          <motion.div variants={textVariant}>
+            <Card
+              backgroundColor='#004FB6'
+              textColor='white'
+              className='flex flex-col gap-6 text-center md:p-14'
+              isRounded>
+              <h3 className='text-xl font-medium'>Más que un suministro, una promesa de tranquilidad</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum repellendus deleniti pariatur ea quasi molestiae quos eaque, assumenda nulla sint minima dolorem est quia hic mollitia tempore praesentium voluptatum tempora.</p>
+            </Card>
+          </motion.div>
+        </motion.div>
       </section>
-    </section>
+    </motion.section>
   )
 }

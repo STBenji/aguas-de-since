@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { Card, CardBody, CardHeader } from '@nextui-org/react'
 
+import { motion } from 'framer-motion'
+
 interface Purpose {
   id: string
   title: string
@@ -30,20 +32,20 @@ const PurposeAboutUs: React.FC = () => {
   return (
     <section className='grid px-3 py-2 place-content-center'>
       <ul className='relative flex flex-wrap justify-center text-sm font-medium text-center text-gray dark:text-gray-400'>
+        <motion.div className={`w-[8rem] h-[2.8rem] rounded-full bg-[#1090CB] absolute top-0 transition-transform duration-300 ${activeTab === 'vision' ? 'right-[11.5rem]' : 'left-[11rem]'} `}></motion.div>
         {purpose.map((item) => (
-          <>
-            <li
-              key={item.id}
-              className='cursor-pointer me-2'>
-              <h1
-                className={`inline-block px-12 py-3 rounded-full ${activeTab === item.id ? 'text-white bg-blue-600' : 'text-[#1090CB] bg-[#E7EFF3]'}`}
-                onClick={() => handleTabClick(item.id)}>
-                {item.title}
-              </h1>
-            </li>
-          </>
+          <li
+            key={item.id}
+            className='z-50 cursor-pointer me-2'>
+            <h1
+              className={`inline-block px-12 py-3 rounded-full ${activeTab === item.id ? 'text-white' : ' text-[#1090CB] bg-[#E7EFF3]'}`}
+              onClick={() => handleTabClick(item.id)}>
+              {item.title}
+            </h1>
+          </li>
         ))}
       </ul>
+
       {/* Mostrar el contenido de la pestaña activa */}
       <div className='mt-8'>
         {purpose.map(

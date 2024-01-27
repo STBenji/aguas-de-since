@@ -105,7 +105,7 @@ const ModalCitePages: React.FC<IModalCitePages> = ({ isOpen, handleClose }) => {
                 onSubmit={handleSubmitData}
                 ref={formRef as React.MutableRefObject<HTMLFormElement>}>
                 <h1 className='mt-5 text-lg font-bold'>Datos personales</h1>
-                <div className='grid grid-cols-2 gap-x-3'>
+                <div className='grid grid-cols-2 gap-2 mt-2'>
                   <Input
                     autoComplete='off'
                     isRequired
@@ -155,6 +155,7 @@ const ModalCitePages: React.FC<IModalCitePages> = ({ isOpen, handleClose }) => {
                     <SelectItem key={'CC'}>CC</SelectItem>
                     <SelectItem key={'CE'}>CE</SelectItem>
                     <SelectItem key={'PEP'}>PEP</SelectItem>
+                    <SelectItem key={'NIT'}>NIT</SelectItem>
                   </Select>
                   <Input
                     autoComplete='off'
@@ -180,7 +181,7 @@ const ModalCitePages: React.FC<IModalCitePages> = ({ isOpen, handleClose }) => {
                     onChange={() => handleInputChange('numFijo')}
                   />
                 </div>
-                <h1 className='mt-5 text-lg font-bold'>¿Qué servicios quiere instalar?</h1>
+                <h1 className='mt-5 text-lg font-bold '>¿Qué servicios quiere instalar?</h1>
                 <Select
                   isRequired
                   labelPlacement={'outside'}
@@ -196,7 +197,7 @@ const ModalCitePages: React.FC<IModalCitePages> = ({ isOpen, handleClose }) => {
                   <SelectItem key={'Alcantarillado'}>Alcantarillado</SelectItem>
                 </Select>
                 <h1 className='mt-5 text-lg font-bold'>¿Dónde instalará los servicios?</h1>
-                <div className='grid grid-cols-2 gap-x-3'>
+                <div className='grid grid-cols-2 gap-3 mt-2'>
                   <Input
                     autoComplete='off'
                     isRequired
