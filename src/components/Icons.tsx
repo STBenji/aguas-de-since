@@ -139,6 +139,7 @@ export const UbicationIcon = () => {
     </>
   )
 }
+
 export const IconTwo = ({ width, height, padding = 'p-8', className, backgroundColor, isRounded, withBackground, roundedType }: IconProps) =>
   withBackground ? (
     <div className={`${padding} ${backgroundColor ? backgroundColor : 'bg-white'} ${isRounded && 'rounded-full'} w-fit h-fit ${roundedType} ${className}`}>
@@ -176,3 +177,19 @@ export const IconThree = ({ width, height, padding = 'p-8', className, backgroun
       className={className}
     />
   )
+
+export const DropDownIcon = () => {
+  return (
+    <>
+      <svg
+        xmlns='http://www.w3.org/2000/svg'
+        width='3em'
+        height='3em'
+        viewBox='0 0 24 24'>
+        <path
+          fill='currentColor'
+          d='m11.565 13.873l-2.677-2.677q-.055-.056-.093-.129t-.037-.157q0-.168.11-.289q.112-.121.294-.121h5.676q.182 0 .293.124q.111.124.111.289q0 .04-.13.283l-2.677 2.677q-.093.092-.2.142q-.107.05-.235.05t-.235-.05q-.107-.05-.2-.142'></path>
+      </svg>
+    </>
+  )
+}

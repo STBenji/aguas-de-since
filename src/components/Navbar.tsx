@@ -1,5 +1,5 @@
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuItem, NavbarMenuToggle, NavbarMenu, Button, Dropdown, DropdownTrigger, DropdownMenu, DropdownItem } from '@nextui-org/react'
-import { Logo } from './Icons'
+import { DropDownIcon, Logo } from './Icons'
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import ModalCitePages from '../pages/ModalCite/ModalDate.pages'
@@ -41,11 +41,13 @@ export const NavbarComponent = () => {
             aria-label={openMenu ? 'Menu cerrado' : 'Menu abierto'}
             className='sm:hidden'
           />
-          <NavbarBrand>
-            <Logo
-              width={100}
-              height={100}
-            />
+          <NavbarBrand className='cursor-pointer'>
+            <Link to={'/'}>
+              <Logo
+                width={100}
+                height={100}
+              />
+            </Link>
           </NavbarBrand>
         </NavbarContent>
         <NavbarContent
@@ -70,7 +72,8 @@ export const NavbarComponent = () => {
                   disableRipple
                   className='p-0 bg-transparent data-[hover=true]:bg-transparent'
                   radius='sm'
-                  variant='light'>
+                  variant='light'
+                  endContent={<DropDownIcon />}>
                   Acerca de nosotros
                 </Button>
               </DropdownTrigger>
