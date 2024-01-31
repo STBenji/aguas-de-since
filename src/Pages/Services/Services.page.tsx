@@ -47,7 +47,7 @@ export default function ServicesPage() {
                     duration={3}
                   />
                 </h3>
-                <p className='font-extralight text-small'>Familia con felices</p>
+                <p className='font-extralight text-small'>Familia felices</p>
               </div>
               <div className='text-center'>
                 <h3 className='text-5xl font-bold '>
