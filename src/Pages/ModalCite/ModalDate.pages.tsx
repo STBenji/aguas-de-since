@@ -26,7 +26,6 @@ const ModalCitePages: React.FC<IModalCitePages> = ({ isOpen, handleClose }) => {
   }
 
   const handleInputChange = (fieldName: string) => {
-    // Se llama cuando se modifica un campo de entrada para eliminar el error asociado
     resetFieldError(fieldName)
   }
 

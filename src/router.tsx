@@ -9,6 +9,7 @@ import ServicesPage from './pages/Services/Services.page'
 import ContactPages from './pages/Contact/Contact.pages'
 import BillPage from './pages/Bill/Bill.page'
 import Transparency from './pages/Transparency/Transparency'
+import CcuPage from './pages/CCU/CCU'
 
 export const router = createBrowserRouter([
   {
@@ -61,6 +62,15 @@ export const router = createBrowserRouter([
     element: (
       <>
         <Transparency />
+        <ScrollRestoration />
+      </>
+    )
+  },
+  {
+    path: '/ccu',
+    element: (
+      <>
+        <CcuPage />
         <ScrollRestoration />
       </>
     )

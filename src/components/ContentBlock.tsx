@@ -1,3 +1,4 @@
+import { Image } from '@nextui-org/react'
 import { ListedTitle } from './ListedTitle'
 import { motion, Variants } from 'framer-motion'
 
@@ -37,10 +38,10 @@ export const ContentBlock = ({ isListedTitle, data = [] }: IContentBlockProps) =
         <p>{description}</p>
       </article>
       <aside className='max-h-96'>
-        <img
+        <Image
           src={imgSrc}
           alt='Descripcion del bloque de texto'
-          className='object-cover w-full h-full rounded-xl aspect-auto'
+          className='object-cover w-full h-full rounded-xl aspect-auto max-h-[50vh]'
           loading='lazy'
         />
       </aside>
