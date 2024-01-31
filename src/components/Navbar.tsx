@@ -16,7 +16,7 @@ export const NavbarComponent = () => {
     { name: 'Transparencia', path: '/transparency' },
     { name: 'CCU Acueducto y Alcantarillado', path: '/ccu' },
     { name: 'Contáctanos', path: '/contact' },
-    { name: 'Paga tu factura', path: '/bill' }
+    // { name: 'Paga tu factura', path: '/bill' }
   ]
 
   // const handleOpenModal = () => {
