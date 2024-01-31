@@ -27,13 +27,20 @@ export const HomeHero = () => {
 
   return (
     <section className='h-[87lvh] bg-[#1090CB]/10 sm:px-32 grid sm:grid-cols-2 items-center gap-10 relative'>
+      <img
+        src='./foto9.jpg'
+        alt=''
+        className='absolute object-cover w-full h-[87lvh] to-transparent rounded-lg z-0 opacity-30 blur-sm  '
+        loading='lazy'
+      />
+
       <motion.article
         variants={container}
         initial='hidden'
         animate='visible'
-        className='flex flex-col items-center gap-10 text-center'>
+        className='z-10 flex flex-col items-center gap-10 text-center'>
         <motion.h1
-          className='text-6xl text-[#1090CB] font-semibold'
+          className='text-6xl text-[#1090CB] font-semibold '
           variants={item}>
           Aguas de Sincé
         </motion.h1>

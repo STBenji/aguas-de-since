@@ -7,18 +7,18 @@ export const CompanyDetails = () => {
     {
       title: 'Descubre el flujo de calidad',
       description: 'Dedicados a llevar agua de calidad a cada hogar. Nuestro compromiso con la pureza, accesibilidad y sostenibilidad es constante.',
-      imgSrc: 'https://via.placeholder.com/300x200'
+      imgSrc: './foto5.jpg'
     },
     {
       title: 'Aguas de Sincé: Donde el compromiso fluye',
       description: 'Aseguramos que el agua fluya sin interrupciones, manteniendo los estándares más altos en cada gota que entregamos',
-      imgSrc: 'https://via.placeholder.com/300x200',
+      imgSrc: './foto6.jpg',
       isReversed: true
     },
     {
       title: 'Tu bienestar, nuestro compromiso',
       description: 'Nuestra misión es simple: proporcionar un servicio confiable y eficiente, garantizando la seguridad y el bienestar de tu hogar',
-      imgSrc: 'https://via.placeholder.com/300x200'
+      imgSrc: './foto7.jpg'
     }
   ]
 
@@ -74,6 +74,9 @@ export const CompanyDetails = () => {
             data={contentBlockData}
           />
         </motion.div>
+        <div className='text-3xl font-semibold text-center'>
+          <h1>Objetivos estratégicos</h1>
+        </div>
         <motion.div
           className='grid grid-rows-2 gap-10 md:grid-cols-2 md:grid-rows-1'
           initial='screenoff'
@@ -83,8 +86,7 @@ export const CompanyDetails = () => {
               backgroundColor='#99999930'
               className='flex flex-col gap-6 text-center md:p-14'
               isRounded>
-              <h3 className='text-xl font-medium'>Tu fuente confiable de calidad y compromiso</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse iusto tenetur, ea ipsam quia minima cum mollitia est cupiditate commodi non alias reprehenderit veritatis modi ab officia. Dicta, deserunt ratione?</p>
+              <p>Garantizar la continuidad, calidad y cobertura de laprestación del servicio acueducto y alcantarillado en el Municipio de Sincé, Sucre.</p>
             </Card>
           </motion.div>
           <motion.div variants={textVariant}>
@@ -93,8 +95,7 @@ export const CompanyDetails = () => {
               textColor='white'
               className='flex flex-col gap-6 text-center md:p-14'
               isRounded>
-              <h3 className='text-xl font-medium'>Más que un suministro, una promesa de tranquilidad</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum repellendus deleniti pariatur ea quasi molestiae quos eaque, assumenda nulla sint minima dolorem est quia hic mollitia tempore praesentium voluptatum tempora.</p>
+              <p>Fortalecer los procesos de participación ciudadana con elfin de mejorar la prestación de los servicios públicos domiciliarios de acueducto y alcantarillado, así como afianzar los canales de comunicación con los grupos de interes.</p>
             </Card>
           </motion.div>
         </motion.div>
