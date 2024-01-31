@@ -33,7 +33,7 @@ const PurposeAboutUs: React.FC = () => {
         {purpose.map((item) => (
           <li
             key={item.id}
-            className='z-50 cursor-pointer me-2'>
+            className='cursor-pointer e-2'>
             <h1
               className={`inline-block px-12 py-3 rounded-full ${activeTab === item.id ? 'text-white bg-[#1090CB]' : ' text-[#1090CB] bg-[#E7EFF3]'}`}
               onClick={() => handleTabClick(item.id)}>
