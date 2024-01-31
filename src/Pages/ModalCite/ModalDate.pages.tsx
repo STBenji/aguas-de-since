@@ -3,7 +3,7 @@ import { Modal, ModalContent, ModalBody, ModalFooter, Button, Input, Select, Sel
 import { Request } from '../../services/api'
 import { Toaster, toast } from 'sonner'
 
-import emailModel from '../../Models/email.model'
+import emailModel from '../../models/email.model'
 import { ZodError } from 'zod'
 
 interface IModalCitePages {

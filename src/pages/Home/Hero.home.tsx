@@ -1,8 +1,8 @@
 import { Logo } from '../../components/Icons'
-import { Button } from '@nextui-org/react'
+import { Button, Link } from '@nextui-org/react'
 import { ShapesDecorators } from './ShapesDecorators.home'
 import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 
 export const HomeHero = () => {
   const container = {
@@ -29,7 +29,7 @@ export const HomeHero = () => {
     <section className='h-[87lvh] bg-[#1090CB]/10 sm:px-32 grid sm:grid-cols-2 items-center gap-10 relative'>
       <img
         src='./foto9.jpg'
-        alt=''
+        alt='aguas de sincé proyectos'
         className='absolute object-cover w-full h-[87lvh] to-transparent rounded-lg z-0 opacity-30 blur-sm  '
         loading='lazy'
       />
@@ -49,8 +49,8 @@ export const HomeHero = () => {
           variants={item}>
           ¡Donde el agua fluye, la calidad y el compromiso llegan a tu hogar!
         </motion.p>
-        <Button color='primary'>
-          <Link to={'/contact'}>Contáctanos </Link>
+        <Button color='primary' as={Link} href='/contact' showAnchorIcon={true}>
+          Contáctanos
         </Button>
       </motion.article>
       <motion.aside
