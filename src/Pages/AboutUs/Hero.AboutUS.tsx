@@ -65,16 +65,21 @@ export default function HeroAboutUs() {
       whileInView={'visible'}
       variants={container}>
       <motion.aside className='flex-wrap justify-end hidden gap-10 md:flex'>
-        {/* <Image /> */}
-        {/* <Image /> */}
         <motion.section
           className='flex items-end '
           variants={aboutVariant}>
-          <div className='w-[200px] h-[210px] bg-[#c4c4c4] rounded-2xl' />
+          <Image
+            className='w-[200px] h-[210px]  rounded-2xl object-cover'
+            src='./foto1.jpg'
+            alt=''
+            loading='lazy'
+          />
         </motion.section>
-        <motion.div
-          className='w-[240px] h-[300px] bg-[#c4c4c4] rounded-2xl'
+        <motion.img
+          className='w-[240px] h-[300px] rounded-2xl object-cover'
+          src='./foto2.jpg'
           variants={aboutVariant}
+          loading='lazy'
         />
         <motion.div variants={imgHouseVariant}>
           <Image

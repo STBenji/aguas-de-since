@@ -14,13 +14,14 @@ export const NavbarComponent = () => {
     { name: 'Servicios', path: '/services' },
     { name: 'Acerca de nosotros', path: '/about' },
     { name: 'Transparencia', path: '/transparency' },
+    { name: 'CCU Acueducto y Alcantarillado', path: '/ccu' },
     { name: 'Contáctanos', path: '/contact' },
     { name: 'Paga tu factura', path: '/bill' }
   ]
 
-  const handleOpenModal = () => {
-    setOpenModal(true) // Cambia el estado para abrir la modal al hacer clic en "Agenda tu cita"
-  }
+  // const handleOpenModal = () => {
+  //   setOpenModal(true)
+  // }
 
   const handleCloseModal = () => {
     setOpenModal(false) // Cambia el estado para cerrar la modal
@@ -85,6 +86,9 @@ export const NavbarComponent = () => {
               <DropdownItem key='Transparencia'>
                 <Link to='/transparency'>Transparencia</Link>
               </DropdownItem>
+              <DropdownItem key='CCU'>
+                <Link to='/ccu'>CCU Acueducto y Alcantarillado</Link>
+              </DropdownItem>
             </DropdownMenu>
           </Dropdown>
           <NavbarItem
@@ -99,14 +103,14 @@ export const NavbarComponent = () => {
           </NavbarItem> */}
         </NavbarContent>
         <NavbarContent justify='end'>
-          <NavbarItem>
+          {/* <NavbarItem>
             <Button
               className='text-sm'
               color='primary'
               onClick={handleOpenModal}>
               Agenda tu cita
             </Button>
-          </NavbarItem>
+          </NavbarItem> */}
         </NavbarContent>
         <NavbarMenu>
           {menuItems.map(({ name, path }, index) => (
