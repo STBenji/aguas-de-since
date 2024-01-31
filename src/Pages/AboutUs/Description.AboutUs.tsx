@@ -18,11 +18,11 @@ export default function DescriptionAboutUs() {
       className='flex flex-col items-center'
       initial='offscreen'
       whileInView={'onscreen'}>
-      <motion.h1
+      <motion.h2
         variants={descriptionVariant}
         className='text-[#1090CB] text-4xl font-bold text-center py-40'>
         ¿Quiénes somos?
-      </motion.h1>
+      </motion.h2>
       <motion.p
         variants={descriptionVariant}
         className='text-xl text-[#585858] max-w-[70%] '>

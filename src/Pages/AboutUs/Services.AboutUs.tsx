@@ -42,7 +42,7 @@ export default function ServicesAboutUs() {
         className='grid place-content-center'
         variants={titleServicesAboutVariant}>
         <div className=' border-t-5 border-[#4628A4] w-[4rem] h-5 m-0 p-0' />
-        <h1 className='text-2xl font-bold'>Nuestros Servicios</h1>
+        <h2 className='text-2xl font-bold'>Nuestros Servicios</h2>
       </motion.aside>
       <motion.article
         initial='hidden'

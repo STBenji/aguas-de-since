@@ -34,11 +34,11 @@ const PurposeAboutUs: React.FC = () => {
           <li
             key={item.id}
             className='cursor-pointer e-2'>
-            <h1
+            <span
               className={`inline-block px-12 py-3 rounded-full ${activeTab === item.id ? 'text-white bg-[#1090CB]' : ' text-[#1090CB] bg-[#E7EFF3]'}`}
               onClick={() => handleTabClick(item.id)}>
               {item.title}
-            </h1>
+            </span>
           </li>
         ))}
       </ul>
@@ -53,7 +53,7 @@ const PurposeAboutUs: React.FC = () => {
                 className='max-w-[40rem] py-3 px-5  h-[35vh]'>
                 <CardBody>
                   <CardHeader className='flex justify-center'>
-                    <h1 className='text-xl font-semibold'>{item.title}</h1>
+                    <h3 className='text-xl font-semibold'>{item.title}</h3>
                   </CardHeader>
                   <p className='text-gray-600'>{item.description}</p>
                 </CardBody>
