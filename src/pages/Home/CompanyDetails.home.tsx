@@ -75,7 +75,7 @@ export const CompanyDetails = () => {
           />
         </motion.div>
         <div className='text-3xl font-semibold text-center'>
-          <h1>Objetivos estratégicos</h1>
+          <h2>Objetivos estratégicos</h2>
         </div>
         <motion.div
           className='grid grid-rows-2 gap-10 md:grid-cols-2 md:grid-rows-1'

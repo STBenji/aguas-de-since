@@ -25,7 +25,7 @@ export const Footer = () => {
             <a
               href='tel:+573147942101'
               className='text-sm font-extralight'>
-              +57 314 7942101
+              +57 323 4197160
             </a>
             <a
               className='text-sm font-extralight'

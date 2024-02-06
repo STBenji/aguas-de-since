@@ -3,7 +3,7 @@ import { Modal, ModalContent, ModalBody, ModalFooter, Button, Input, Select, Sel
 import { Request } from '../../services/api'
 import { Toaster, toast } from 'sonner'
 
-import emailModel from '../../Models/email.model'
+import emailModel from '../../models/email.model'
 import { ZodError } from 'zod'
 
 interface IModalCitePages {
@@ -103,7 +103,7 @@ const ModalCitePages: React.FC<IModalCitePages> = ({ isOpen, handleClose }) => {
                 action='post'
                 onSubmit={handleSubmitData}
                 ref={formRef as React.MutableRefObject<HTMLFormElement>}>
-                <h1 className='mt-5 text-lg font-bold'>Datos personales</h1>
+                <h3 className='mt-5 text-lg font-bold'>Datos personales</h3>
                 <div className='grid grid-cols-2 gap-2 mt-2'>
                   <Input
                     autoComplete='off'
@@ -180,7 +180,7 @@ const ModalCitePages: React.FC<IModalCitePages> = ({ isOpen, handleClose }) => {
                     onChange={() => handleInputChange('numFijo')}
                   />
                 </div>
-                <h1 className='mt-5 text-lg font-bold '>¿Qué servicios quiere instalar?</h1>
+                <h3 className='mt-5 text-lg font-bold '>¿Qué servicios quiere instalar?</h3>
                 <Select
                   isRequired
                   labelPlacement={'outside'}
@@ -195,7 +195,7 @@ const ModalCitePages: React.FC<IModalCitePages> = ({ isOpen, handleClose }) => {
                   <SelectItem key={'Acueducto'}>Acueducto</SelectItem>
                   <SelectItem key={'Alcantarillado'}>Alcantarillado</SelectItem>
                 </Select>
-                <h1 className='mt-5 text-lg font-bold'>¿Dónde instalará los servicios?</h1>
+                <h3 className='mt-5 text-lg font-bold'>¿Dónde instalará los servicios?</h3>
                 <div className='grid grid-cols-2 gap-3 mt-2'>
                   <Input
                     autoComplete='off'

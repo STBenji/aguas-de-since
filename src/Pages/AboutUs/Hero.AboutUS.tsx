@@ -94,7 +94,7 @@ export default function HeroAboutUs() {
           className='flex flex-wrap gap-2 pl-12'
           variants={nameVariant}>
           <span className='text-[#1090CB] font-semibold text-2xl'>Acerca de nosotros</span>
-          <h1 className='text-4xl font-bold text-[#252525]'>Aguas de Sincé S.A ESP</h1>
+          <h2 className='text-4xl font-bold text-[#252525]'>Aguas de Sincé S.A ESP</h2>
           <p className='text-[#777]  font-regular '>
             Prestadora de servicios de acueducto y alcantarillado del <br /> municipio de Sincé.
           </p>

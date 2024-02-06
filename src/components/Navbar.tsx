@@ -16,7 +16,7 @@ export const NavbarComponent = () => {
     { name: 'Transparencia', path: '/transparency' },
     { name: 'CCU Acueducto y Alcantarillado', path: '/ccu' },
     { name: 'Contáctanos', path: '/contact' },
-    { name: 'Paga tu factura', path: '/bill' }
+    // { name: 'Paga tu factura', path: '/bill' }
   ]
 
   // const handleOpenModal = () => {
@@ -80,14 +80,14 @@ export const NavbarComponent = () => {
               </DropdownTrigger>
             </NavbarItem>
             <DropdownMenu>
-              <DropdownItem key='Sobre nosotros'>
-                <Link to='/about'>Sobre nosotros</Link>
+              <DropdownItem key='Sobre nosotros' href='/about'>
+                Sobre nosotros
               </DropdownItem>
-              <DropdownItem key='Transparencia'>
-                <Link to='/transparency'>Transparencia</Link>
+              <DropdownItem key='Transparencia' href='/transparency'>
+                Transparencia
               </DropdownItem>
-              <DropdownItem key='CCU'>
-                <Link to='/ccu'>CCU Acueducto y Alcantarillado</Link>
+              <DropdownItem key='CCU' href='/ccu'>
+                CCU Acueducto y Alcantarillado
               </DropdownItem>
             </DropdownMenu>
           </Dropdown>
