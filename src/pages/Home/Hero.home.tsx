@@ -1,5 +1,5 @@
-import { Logo } from '../../components/Icons'
-import { Button, Link } from '@nextui-org/react'
+import { FacebookIcon, Logo, WhatsAppIcon } from '../../components/Icons'
+import { Button, Card, CardBody, CardFooter, Link } from '@nextui-org/react'
 import { ShapesDecorators } from './ShapesDecorators.home'
 import { motion } from 'framer-motion'
 // import { Link } from 'react-router-dom'
@@ -49,9 +49,13 @@ export const HomeHero = () => {
           variants={item}>
           ¡Donde el agua fluye, la calidad y el compromiso llegan a tu hogar!
         </motion.p>
-        <Button color='primary' as={Link} href='/contact' showAnchorIcon={true}>
-          Contáctanos
-        </Button>
+        <Card>
+          <CardBody className='flex flex-row items-center gap-2'>
+            Nuestras redes sociales:
+            <FacebookIcon />
+            <WhatsAppIcon />
+          </CardBody>
+        </Card>
       </motion.article>
       <motion.aside
         className='items-center justify-center hidden sm:flex'

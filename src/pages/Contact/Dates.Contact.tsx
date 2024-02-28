@@ -9,7 +9,7 @@ export default function DateContanct() {
       </section>
       <section className='flex justify-center md:border-r-3 border-[#c2c2c2] py-10 gap-5'>
         <PhoneCallIcon />
-        <p>+57 314 7942101</p>
+        <a href='https://wa.me/message/JISDUY4RPKG5F1' className='underline cursor-pointer' target='_blank'>+57 323 4197160</a>
       </section>
       <section className='flex justify-center gap-5 py-10 '>
         <UbicationIcon />

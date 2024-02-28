@@ -63,7 +63,7 @@ export const PQRSInfo = () => {
           className='grid self-center text-3xl font-extrabold uppercase auto-rows-min'>
           <span className='justify-self-center text-center md:text-left md:pr-96 text-[#4ab8c7] text-shadow-[0_1.2px_1.2px_#4ab8c7]'>Peticiones,</span>
           <span className='text-transparent justify-self-center text-center md:text-left font-outline text-shadow-[0_1.2px_1.2px_#4ab8c7]'>Quejas, Reclamos</span>
-          <span className='justify-self-center text-[#4ab8c7] text-center md:text-left'>Sugerencias y Denuncias</span>
+          <span className='justify-self-center text-[#4ab8c7] text-center md:text-left'>y Sugerencias.</span>
         </motion.h3>
       </div>
       <motion.div

@@ -15,7 +15,7 @@ export const NavbarComponent = () => {
     { name: 'Acerca de nosotros', path: '/about' },
     { name: 'Transparencia', path: '/transparency' },
     { name: 'CCU Acueducto y Alcantarillado', path: '/ccu' },
-    { name: 'Contáctanos', path: '/contact' },
+    { name: 'Contáctanos', path: '/contact' }
     // { name: 'Paga tu factura', path: '/bill' }
   ]
 
@@ -80,13 +80,19 @@ export const NavbarComponent = () => {
               </DropdownTrigger>
             </NavbarItem>
             <DropdownMenu>
-              <DropdownItem key='Sobre nosotros' href='/about'>
+              <DropdownItem
+                key='Sobre nosotros'
+                href='/about'>
                 Sobre nosotros
               </DropdownItem>
-              <DropdownItem key='Transparencia' href='/transparency'>
+              <DropdownItem
+                key='Transparencia'
+                href='/transparency'>
                 Transparencia
               </DropdownItem>
-              <DropdownItem key='CCU' href='/ccu'>
+              <DropdownItem
+                key='CCU'
+                href='/ccu'>
                 CCU Acueducto y Alcantarillado
               </DropdownItem>
             </DropdownMenu>
