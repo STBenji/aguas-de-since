@@ -1,5 +1,5 @@
 import { FacebookIcon, Logo, WhatsAppIcon } from '../../components/Icons'
-import { Button, Card, CardBody, CardFooter, Link } from '@nextui-org/react'
+import { Card, CardBody } from '@nextui-org/react'
 import { ShapesDecorators } from './ShapesDecorators.home'
 import { motion } from 'framer-motion'
 // import { Link } from 'react-router-dom'
