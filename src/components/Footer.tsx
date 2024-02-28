@@ -23,14 +23,34 @@ export const Footer = () => {
           <h4 className='self-end font-semibold'>Contáctanos</h4>
           <div className='flex flex-col'>
             <a
-              href='tel:+573147942101'
-              className='text-sm font-extralight'>
+              href='https://wa.me/message/JISDUY4RPKG5F1'
+              className='text-sm underline font-extralight'>
               +57 323 4197160
             </a>
             <a
               className='text-sm font-extralight'
               href='mailto:'>
-              aguasdesince@since-sucre.gov.co
+              gerencia@aguasdesince.com.co
+            </a>
+            <a
+              className='text-sm font-extralight'
+              href='mailto:'>
+              operaciones@aguasdesince.com.co
+            </a>
+            <a
+              className='text-sm font-extralight'
+              href='mailto:'>
+              controlinterno@aguasdesince.com.co
+            </a>
+            <a
+              className='text-sm font-extralight'
+              href='mailto:'>
+              juridica@aguasdesince.com.co
+            </a>
+            <a
+              className='text-sm font-extralight'
+              href='mailto:'>
+              comercial@aguasdesince.com.co
             </a>
           </div>
         </div>
